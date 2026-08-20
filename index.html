@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIEK Free Prep</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
+header{background:linear-gradient(135deg,#173f8a,#2563eb);color:white;padding:26px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:800}.tag{opacity:.9}
+.hero{padding:55px 7%;background:white}.hero h1{font-size:42px;margin:0 0 12px}.hero p{font-size:18px;max-width:700px;color:#536174}
+.btn{display:inline-block;background:#2563eb;color:#fff;padding:13px 20px;border-radius:10px;text-decoration:none;border:0;cursor:pointer;font-weight:700}
+.container{padding:35px 7%}.section-title{margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border-radius:16px;padding:22px;box-shadow:0 5px 20px #0000000d;border:1px solid #e8ecf3}
+.card h3{margin-top:0}.card p{color:#637083;line-height:1.5}.pill{display:inline-block;background:#eaf1ff;color:#2457b8;padding:6px 10px;border-radius:20px;font-size:12px;font-weight:700}
+.features{margin-top:28px}.quiz{margin-top:35px;background:#101c36;color:white;border-radius:18px;padding:28px}
+.quiz button{display:block;width:100%;text-align:left;margin:9px 0;padding:12px;border:0;border-radius:9px;cursor:pointer}
+#result{margin-top:15px;font-weight:bold}.notice{margin-top:25px;padding:15px;background:#fff7df;border-left:4px solid #f0b429;border-radius:8px}
+footer{padding:28px 7%;text-align:center;color:#697386}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">BIEK Free Prep</div>
+  <div class="tag">Free learning • Practice • Progress</div>
+</header>
+
+<section class="hero">
+  <h1>Karachi Inter Board Preparation — Free</h1>
+  <p>A simple prototype for students preparing for Intermediate exams. Choose your class, subject and chapter, then practice with quizzes and notes.</p>
+  <a class="btn" href="#subjects">Start Preparation</a>
+</section>
+
+<main class="container">
+  <h2 class="section-title" id="subjects">Choose Your Class</h2>
+  <div class="grid">
+    <div class="card"><span class="pill">XI</span><h3>1st Year</h3><p>Chapter-wise notes, MCQs, practice questions and tests.</p><button class="btn" onclick="showMsg('1st Year selected')">Open Class</button></div>
+    <div class="card"><span class="pill">XII</span><h3>2nd Year</h3><p>Board-focused preparation with revision and practice.</p><button class="btn" onclick="showMsg('2nd Year selected')">Open Class</button></div>
+  </div>
+
+  <div class="features">
+    <h2>Subjects</h2>
+    <div class="grid">
+      <div class="card"><h3>📐 Mathematics</h3><p>Concepts • Exercises • MCQs • Tests</p></div>
+      <div class="card"><h3>⚡ Physics</h3><p>Formulas • Numericals • MCQs • Tests</p></div>
+      <div class="card"><h3>🧪 Chemistry</h3><p>Reactions • Concepts • MCQs • Tests</p></div>
+      <div class="card"><h3>🧬 Biology</h3><p>Chapter notes • Diagrams • MCQs</p></div>
+      <div class="card"><h3>📖 English</h3><p>Grammar • Literature • Writing practice</p></div>
+      <div class="card"><h3>💻 Computer Science</h3><p>Concepts • Programming basics • MCQs</p></div>
+    </div>
+  </div>
+
+  <div class="features">
+    <h2>Student Tools</h2>
+    <div class="grid">
+      <div class="card"><h3>📝 Notes</h3><p>Short, easy-to-revise chapter notes.</p></div>
+      <div class="card"><h3>❓ MCQ Practice</h3><p>Instant feedback after each answer.</p></div>
+      <div class="card"><h3>📄 Past Papers</h3><p>Board-paper section for revision.</p></div>
+      <div class="card"><h3>📊 Progress</h3><p>Track completed chapters and quiz scores.</p></div>
+    </div>
+  </div>
+
+  <section class="quiz">
+    <h2>Quick Practice Test</h2>
+    <p>Which quantity is measured in Newton?</p>
+    <button onclick="answer(false)">A. Energy</button>
+    <button onclick="answer(true)">B. Force</button>
+    <button onclick="answer(false)">C. Power</button>
+    <button onclick="answer(false)">D. Pressure</button>
+    <div id="result"></div>
+  </section>
+
+  <div class="notice">
+    <strong>Prototype note:</strong> This is a design/demo version. Before launch, we should add verified BIEK syllabus content, original notes, legally usable resources, past-paper sources and a proper database/admin panel.
+  </div>
+</main>
+
+<footer>© 2026 BIEK Free Prep — Prototype</footer>
+
+<script>
+function answer(correct){
+ document.getElementById('result').textContent = correct ? '✅ Correct! Force is measured in Newton.' : '❌ Try again. Newton is the SI unit of force.';
+}
+function showMsg(text){alert(text + ' — subject/chapter pages will be added in the next version.');}
+</script>
+</body>
+</html>
